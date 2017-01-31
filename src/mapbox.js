@@ -34,7 +34,7 @@ L.mapbox = module.exports = {
     FeatureLayer: featureLayer.FeatureLayer,
     map: map.map,
     Map: map.Map,
-    config: require('./config'),
+    config: config,
     sanitize: require('sanitize-caja'),
     template: require('mustache').to_html,
     feedback: require('./feedback')
@@ -49,4 +49,4 @@ window.L.Icon.Default.imagePath =
     ((document.location.protocol === 'https:' ||
     document.location.protocol === 'http:') ? '' : 'https:') +
     '//api.tiles.mapbox.com/mapbox.js/' + 'v' +
-    config.version + '/images/';
+    config.VERSION + '/images/';
